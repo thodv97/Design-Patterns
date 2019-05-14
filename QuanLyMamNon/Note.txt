@@ -1,0 +1,20 @@
+    Quản lý trường mầm non v1
+
+1) Phát biểu bài toán
+
+
+2) Mô tả các nghiệp vụ
+2.1)  Bản mô tả công việc
+2.2) Bản mô tả chi tiết công việc
+
+3) Phân tích thiết kế hướng đối tượng
+3.1) Use case diagram
+3.2) Sequence diagram
+3.3) Collaboration diagram
+3.4) Class diagram
+3.5) State diagram
+
+4) Áp dụng Design Patters để xây dựng các lớp
+
+5) Code
+
