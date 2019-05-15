@@ -1,0 +1,10 @@
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.csprojAssemblyReference.cache
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.frmHocSinh.resources
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.Properties.Resources.resources
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.csproj.GenerateResource.cache
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.csproj.CoreCompileInputs.cache
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\QuanLyMamNon.exe.config
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\QuanLyMamNon.exe
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\QuanLyMamNon.pdb
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.exe
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.pdb

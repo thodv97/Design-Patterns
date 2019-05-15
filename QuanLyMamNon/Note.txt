@@ -1,11 +1,6 @@
     Quản lý trường mầm non v1
 
 1) Phát biểu bài toán
-    Hiện nay, dịch vụ trông trẻ đang được phát triển theo quy mô lớn. Số lượng nơi trông trẻ đang ngày càng tăng,
-dẫn đến việc không thể đáp ứng được nhu cầu hiện tại. Nếu vẫn quản lý theo kiểu thủ công sẽ rất mất nhiều thời gian lẫn công sức, hiệu quả thì không cao. 
-Thậm chí sẽ bị nơi trông trẻ khác chiếm mất thị trường. Vậy nên việc nâng cấp quy trình làm việc cũng như chất lượng dịch vụ là điều tất yếu
-    Phụ huynh có nhu cầu gửi trẻ sẽ phải đăng ký nhập học. Nếu đủ điều kiện nhập học thì phụ huynh
-sẽ phải nộp sơ yếu lý lịch của trẻ. Hàng tháng, phụ huynh phải đóng tiền và nhận biên lai.
 
 2) Mô tả các nghiệp vụ
 2.1)  Bản mô tả công việc
