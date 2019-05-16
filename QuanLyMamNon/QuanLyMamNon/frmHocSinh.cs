@@ -68,12 +68,31 @@ namespace QuanLyMamNon
         {
             // TODO: This line of code loads data into the 'quanLyManNonDataSet.tblHocSinh' table. You can move, or remove it, as needed.
             this.tblHocSinhTableAdapter.Fill(this.quanLyManNonDataSet.tblHocSinh);
-            SqlConnection conn = DB_Utilities.GetDBConnection();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM tblHocSinh", conn);
-            DataTable dataTable = new DataTable();
-            sqlDataAdapter.Fill(dataTable);
 
-            dgrvDSHocSinh.DataSource = dataTable;
+            //SqlConnection conn = DB_Utilities.GetDBConnection();
+            //SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM tblHocSinh", conn);
+            //DataTable dataTable = new DataTable();
+            //sqlDataAdapter.Fill(dataTable);
+
+            //dgrvDSHocSinh.DataSource = dataTable;
+
+        }
+
+        private void dgrvDSHocSinh_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtClassCode.Text = dgrvDSHocSinh.CurrentRow.Cells["MaLop"].Value.ToString();
+            txtStudentName.Text = dgrvDSHocSinh.CurrentRow.Cells["TenHocSinh"].Value.ToString();
+            dateTimePicker1.Text = dgrvDSHocSinh.CurrentRow.Cells["NgaySinh"].Value.ToString();
+            txtAddress.Text = dgrvDSHocSinh.CurrentRow.Cells["DiaChi"].Value.ToString();
+            txtTelephoneNumber.Text = dgrvDSHocSinh.CurrentRow.Cells["SDT"].Value.ToString();
+            if(dgrvDSHocSinh.CurrentRow.Cells["GioiTinh"].Value.ToString() == "Nam")
+            {
+                rbMale.Checked = true;
+            }
+            else
+            {
+                rbFemale.Checked = true;
+            }
         }
     }
 }
