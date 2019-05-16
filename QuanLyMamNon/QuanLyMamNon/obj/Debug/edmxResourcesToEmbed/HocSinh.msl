@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HocSinhModelStoreContainer" CdmEntityContainer="HocSinhEntities">
+    <EntitySetMapping Name="tblHocSinhs">
+      <EntityTypeMapping TypeName="HocSinhModel.tblHocSinh">
+        <MappingFragment StoreEntitySet="tblHocSinh">
+          <ScalarProperty Name="MaHocSinh" ColumnName="MaHocSinh" />
+          <ScalarProperty Name="TenHocSinh" ColumnName="TenHocSinh" />
+          <ScalarProperty Name="MaLop" ColumnName="MaLop" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

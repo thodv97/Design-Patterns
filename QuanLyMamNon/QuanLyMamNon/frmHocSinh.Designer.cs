@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -51,22 +50,10 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgrvDSHocSinh = new System.Windows.Forms.DataGridView();
-            this.MaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblHocSinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLyManNonDataSet = new QuanLyMamNon.QuanLyManNonDataSet();
-            this.tblHocSinhTableAdapter = new QuanLyMamNon.QuanLyManNonDataSetTableAdapters.tblHocSinhTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvDSHocSinh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblHocSinhBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyManNonDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -114,7 +101,7 @@
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(151, 29);
+            this.rbFemale.Location = new System.Drawing.Point(146, 29);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(56, 26);
             this.rbFemale.TabIndex = 1;
@@ -244,6 +231,7 @@
             this.txtSearch.Size = new System.Drawing.Size(256, 30);
             this.txtSearch.TabIndex = 11;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
             // 
             // btnEdit
             // 
@@ -253,6 +241,7 @@
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Sửa học sinh";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnDelete
             // 
@@ -262,6 +251,7 @@
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Xóa học sinh";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnAdd
             // 
@@ -278,96 +268,16 @@
             this.dgrvDSHocSinh.AllowUserToAddRows = false;
             this.dgrvDSHocSinh.AllowUserToDeleteRows = false;
             this.dgrvDSHocSinh.AllowUserToOrderColumns = true;
-            this.dgrvDSHocSinh.AutoGenerateColumns = false;
             this.dgrvDSHocSinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgrvDSHocSinh.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgrvDSHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrvDSHocSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaHocSinh,
-            this.TenHocSinh,
-            this.MaLop,
-            this.GioiTinh,
-            this.NgaySinh,
-            this.Diachi,
-            this.SDT});
-            this.dgrvDSHocSinh.DataSource = this.tblHocSinhBindingSource;
             this.dgrvDSHocSinh.Location = new System.Drawing.Point(13, 316);
             this.dgrvDSHocSinh.Name = "dgrvDSHocSinh";
             this.dgrvDSHocSinh.ReadOnly = true;
             this.dgrvDSHocSinh.RowTemplate.Height = 24;
             this.dgrvDSHocSinh.Size = new System.Drawing.Size(1096, 302);
             this.dgrvDSHocSinh.TabIndex = 3;
-            this.dgrvDSHocSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrvDSHocSinh_CellClick);
-            // 
-            // MaHocSinh
-            // 
-            this.MaHocSinh.DataPropertyName = "MaHocSinh";
-            this.MaHocSinh.HeaderText = "Mã học sinh";
-            this.MaHocSinh.Name = "MaHocSinh";
-            this.MaHocSinh.ReadOnly = true;
-            this.MaHocSinh.Width = 135;
-            // 
-            // TenHocSinh
-            // 
-            this.TenHocSinh.DataPropertyName = "TenHocSinh";
-            this.TenHocSinh.HeaderText = "Tên học sinh";
-            this.TenHocSinh.Name = "TenHocSinh";
-            this.TenHocSinh.ReadOnly = true;
-            this.TenHocSinh.Width = 139;
-            // 
-            // MaLop
-            // 
-            this.MaLop.DataPropertyName = "MaLop";
-            this.MaLop.HeaderText = "Mã lớp";
-            this.MaLop.Name = "MaLop";
-            this.MaLop.ReadOnly = true;
-            this.MaLop.Width = 97;
-            // 
-            // GioiTinh
-            // 
-            this.GioiTinh.DataPropertyName = "GioiTinh";
-            this.GioiTinh.HeaderText = "Giới tính";
-            this.GioiTinh.Name = "GioiTinh";
-            this.GioiTinh.ReadOnly = true;
-            this.GioiTinh.Width = 110;
-            // 
-            // NgaySinh
-            // 
-            this.NgaySinh.DataPropertyName = "NgaySinh";
-            this.NgaySinh.HeaderText = "Ngày sinh";
-            this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.ReadOnly = true;
-            this.NgaySinh.Width = 117;
-            // 
-            // Diachi
-            // 
-            this.Diachi.DataPropertyName = "Diachi";
-            this.Diachi.HeaderText = "Địa chỉ";
-            this.Diachi.Name = "Diachi";
-            this.Diachi.ReadOnly = true;
-            this.Diachi.Width = 97;
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SDT";
-            this.SDT.HeaderText = "Số điện thoại";
-            this.SDT.Name = "SDT";
-            this.SDT.ReadOnly = true;
-            this.SDT.Width = 143;
-            // 
-            // tblHocSinhBindingSource
-            // 
-            this.tblHocSinhBindingSource.DataMember = "tblHocSinh";
-            this.tblHocSinhBindingSource.DataSource = this.quanLyManNonDataSet;
-            // 
-            // quanLyManNonDataSet
-            // 
-            this.quanLyManNonDataSet.DataSetName = "QuanLyManNonDataSet";
-            this.quanLyManNonDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblHocSinhTableAdapter
-            // 
-            this.tblHocSinhTableAdapter.ClearBeforeFill = true;
+            this.dgrvDSHocSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgrvDSHocSinh_CellClick);
             // 
             // frmHocSinh
             // 
@@ -394,8 +304,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvDSHocSinh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblHocSinhBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyManNonDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,9 +333,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgrvDSHocSinh;
-        private QuanLyManNonDataSet quanLyManNonDataSet;
-        private System.Windows.Forms.BindingSource tblHocSinhBindingSource;
-        private QuanLyManNonDataSetTableAdapters.tblHocSinhTableAdapter tblHocSinhTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn maHocSinhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenHocSinhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maLopDataGridViewTextBoxColumn;

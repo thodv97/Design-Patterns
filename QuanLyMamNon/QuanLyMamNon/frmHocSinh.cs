@@ -13,6 +13,7 @@ namespace QuanLyMamNon
 {
     public partial class frmHocSinh : Form
     {
+        private static DataTable dataTable;
         public frmHocSinh()
         {
             InitializeComponent();
@@ -45,13 +46,13 @@ namespace QuanLyMamNon
 
                     SqlCommand sqlCommand = new SqlCommand(query, conn);
                     sqlCommand.ExecuteNonQuery();
-                    MessageBox.Show("Inserted successful !");
 
                     SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM tblHocSinh", conn);
-                    DataTable dataTable = new DataTable();
+                    dataTable = new DataTable();
                     sqlDataAdapter.Fill(dataTable);
 
                     dgrvDSHocSinh.DataSource = dataTable;
+                    MessageBox.Show("Inserted successful !");
                 }
                 catch (Exception ex)
                 {
@@ -67,18 +68,17 @@ namespace QuanLyMamNon
         private void FrmHocSinh_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quanLyManNonDataSet.tblHocSinh' table. You can move, or remove it, as needed.
-            this.tblHocSinhTableAdapter.Fill(this.quanLyManNonDataSet.tblHocSinh);
+            //this.tblHocSinhTableAdapter.Fill(this.quanLyManNonDataSet.tblHocSinh);
+            
+            SqlConnection conn = DB_Utilities.GetDBConnection();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM tblHocSinh", conn);
+            dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
 
-            //SqlConnection conn = DB_Utilities.GetDBConnection();
-            //SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM tblHocSinh", conn);
-            //DataTable dataTable = new DataTable();
-            //sqlDataAdapter.Fill(dataTable);
-
-            //dgrvDSHocSinh.DataSource = dataTable;
-
+            dgrvDSHocSinh.DataSource = dataTable;
         }
 
-        private void dgrvDSHocSinh_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DgrvDSHocSinh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtClassCode.Text = dgrvDSHocSinh.CurrentRow.Cells["MaLop"].Value.ToString();
             txtStudentName.Text = dgrvDSHocSinh.CurrentRow.Cells["TenHocSinh"].Value.ToString();
@@ -93,6 +93,112 @@ namespace QuanLyMamNon
             {
                 rbFemale.Checked = true;
             }
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Bạn có chắc chắn xóa ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                // Do nothing !
+            }
+            else
+            {
+                // Câu lệnh delete
+                string maHocSinh = dgrvDSHocSinh.CurrentRow.Cells["MaHocSinh"].Value.ToString();
+                string query = "DELETE tblHocSinh WHERE MaHocSinh = '" + maHocSinh + "'";
+                SqlConnection conn = DB_Utilities.GetDBConnection();
+
+                try
+                {
+                    conn.Open();
+
+                    SqlCommand sqlCommand = new SqlCommand(query, conn);
+                    sqlCommand.ExecuteNonQuery();
+
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM tblHocSinh", conn);
+                    dataTable = new DataTable();
+                    sqlDataAdapter.Fill(dataTable);
+
+                    dgrvDSHocSinh.DataSource = dataTable;
+                    MessageBox.Show("Deleted successful !");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Bạn có muốn sửa ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                // Do nothing !
+            }
+            else
+            {
+                string maHocSinh = dgrvDSHocSinh.CurrentRow.Cells["MaHocSinh"].Value.ToString();
+
+                string classCode = txtClassCode.Text;
+                string studentName = txtStudentName.Text;
+                string brithday = "Convert(DATE, '" + dateTimePicker1.Text + "', 103)";
+                string address = txtAddress.Text;
+                string telephoneNumber = txtTelephoneNumber.Text;
+                string gender = "Nữ";
+                if (rbMale.Checked) gender = "Nam";
+
+                if (classCode == "" || studentName == "" || brithday == "" || address == "" || gender == "" || telephoneNumber == "")
+                {
+                    MessageBox.Show("Thông tin không hợp lệ. Xin kiểm tra lại !", "Message", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    // Câu lệnh update
+                    string query = "UPDATE tblHocSinh SET TenHocSinh = N'" + studentName + "', MaLop = '" + classCode + "', GioiTinh = N'" + gender + "', NgaySinh = " + brithday + ", DiaChi = N'"
+                        + address + "', SDT = '" + telephoneNumber + "' WHERE MaHocSinh = '" + maHocSinh + "';";
+                    SqlConnection conn = DB_Utilities.GetDBConnection();
+
+                    try
+                    {
+                        conn.Open();
+
+                        SqlCommand sqlCommand = new SqlCommand(query, conn);
+                        sqlCommand.ExecuteNonQuery();
+
+                        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM tblHocSinh", conn);
+                        dataTable = new DataTable();
+                        sqlDataAdapter.Fill(dataTable);
+
+                        dgrvDSHocSinh.DataSource = dataTable;
+                        MessageBox.Show("Updated successful !");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+        }
+
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
+        {
+            DataView dataView = dataTable.DefaultView;
+
+            dataView.RowFilter = "TenHocSinh LIKE '%" + txtSearch.Text + "%' OR DiaChi LIKE '%" + txtSearch.Text + "%' OR SDT LIKE '%" + txtSearch.Text + "%' OR GioiTinh LIKE '%"
+                + txtSearch.Text + "%' OR MaLop LIKE '%" + txtSearch.Text + "%'";// OR NgaySinh LIKE '%" + txtSearch.Text + "%'";
+            dgrvDSHocSinh.DataSource = dataView;
         }
     }
 }
