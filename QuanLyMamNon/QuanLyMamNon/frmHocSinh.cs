@@ -196,9 +196,34 @@ namespace QuanLyMamNon
         {
             DataView dataView = dataTable.DefaultView;
 
-            dataView.RowFilter = "TenHocSinh LIKE '%" + txtSearch.Text + "%' OR DiaChi LIKE '%" + txtSearch.Text + "%' OR SDT LIKE '%" + txtSearch.Text + "%' OR GioiTinh LIKE '%"
-                + txtSearch.Text + "%' OR MaLop LIKE '%" + txtSearch.Text + "%'";// OR NgaySinh LIKE '%" + txtSearch.Text + "%'";
+            dataView.RowFilter = "TenHocSinh LIKE '%" + txtSearch.Text.Trim() + "%' OR DiaChi LIKE '%" + txtSearch.Text.Trim() + "%' OR SDT LIKE '%" + txtSearch.Text.Trim() + "%' OR GioiTinh LIKE '%"
+                + txtSearch.Text.Trim() + "%' OR MaLop LIKE '%" + txtSearch.Text.Trim() + "%'";// OR NgaySinh LIKE '%" + txtSearch.Text + "%'";
             dgrvDSHocSinh.DataSource = dataView;
+        }
+
+        private void TxtSearch_Leave(object sender, EventArgs e)
+        {
+            if(txtSearch.Text.Trim() == "")
+            {
+                txtSearch.Text = "... Tìm kiếm ...";
+                txtSearch.ForeColor = Color.DarkGray;
+
+                SqlConnection conn = DB_Utilities.GetDBConnection();
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM tblHocSinh", conn);
+                dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+
+                dgrvDSHocSinh.DataSource = dataTable;
+            }
+        }
+
+        private void TxtSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "... Tìm kiếm ...")
+            {
+                txtSearch.Text = "";
+                txtSearch.ForeColor = Color.Black;
+            }
         }
     }
 }

@@ -217,21 +217,27 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(947, 41);
+            this.btnSearch.Enabled = false;
+            this.btnSearch.Location = new System.Drawing.Point(949, 41);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(143, 32);
+            this.btnSearch.Size = new System.Drawing.Size(128, 32);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(677, 43);
+            this.txtSearch.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.Location = new System.Drawing.Point(664, 41);
+            this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(256, 30);
+            this.txtSearch.Size = new System.Drawing.Size(269, 32);
             this.txtSearch.TabIndex = 11;
+            this.txtSearch.Text = "... Tìm kiếm ...";
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
+            this.txtSearch.Enter += new System.EventHandler(this.TxtSearch_Enter);
+            this.txtSearch.Leave += new System.EventHandler(this.TxtSearch_Leave);
             // 
             // btnEdit
             // 
