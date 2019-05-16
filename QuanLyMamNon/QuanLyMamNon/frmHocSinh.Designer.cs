@@ -44,12 +44,12 @@
             this.txtClassCode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgrvDSHocSinh = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -203,7 +203,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnSearch);
+            this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.txtSearch);
             this.groupBox3.Controls.Add(this.btnEdit);
             this.groupBox3.Controls.Add(this.btnDelete);
@@ -215,25 +215,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thao tác xử lý";
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Enabled = false;
-            this.btnSearch.Location = new System.Drawing.Point(949, 41);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(128, 32);
-            this.btnSearch.TabIndex = 12;
-            this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
             // txtSearch
             // 
-            this.txtSearch.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.ForeColor = System.Drawing.Color.Black;
             this.txtSearch.Location = new System.Drawing.Point(664, 41);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(269, 32);
             this.txtSearch.TabIndex = 11;
-            this.txtSearch.Text = "... Tìm kiếm ...";
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
             this.txtSearch.Enter += new System.EventHandler(this.TxtSearch_Enter);
@@ -285,6 +274,15 @@
             this.dgrvDSHocSinh.TabIndex = 3;
             this.dgrvDSHocSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgrvDSHocSinh_CellClick);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(939, 44);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 22);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Tìm kiếm";
+            // 
             // frmHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -333,7 +331,6 @@
         private System.Windows.Forms.RadioButton rbFemale;
         private System.Windows.Forms.RadioButton rbMale;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
@@ -359,5 +356,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn Diachi;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
+        private System.Windows.Forms.Label label7;
     }
 }
