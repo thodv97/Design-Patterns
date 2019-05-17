@@ -68,6 +68,8 @@ namespace QuanLyMamNon
         private void FrmHocSinh_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quanLyManNonDataSet.tblHocSinh' table. You can move, or remove it, as needed.
+            this.tblHocSinhTableAdapter.Fill(this.quanLyManNonDataSet.tblHocSinh);
+            // TODO: This line of code loads data into the 'quanLyManNonDataSet.tblHocSinh' table. You can move, or remove it, as needed.
             //this.tblHocSinhTableAdapter.Fill(this.quanLyManNonDataSet.tblHocSinh);
 
             SqlConnection conn = DB_Utilities.GetDBConnection();
