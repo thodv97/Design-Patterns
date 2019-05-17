@@ -69,13 +69,30 @@ namespace QuanLyMamNon
         {
             // TODO: This line of code loads data into the 'quanLyManNonDataSet.tblHocSinh' table. You can move, or remove it, as needed.
             //this.tblHocSinhTableAdapter.Fill(this.quanLyManNonDataSet.tblHocSinh);
-            
+
             SqlConnection conn = DB_Utilities.GetDBConnection();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("SELECT * FROM tblHocSinh", conn);
             dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
 
             dgrvDSHocSinh.DataSource = dataTable;
+
+            if(dataTable.Rows.Count > 0)
+            {
+                txtClassCode.Text = dgrvDSHocSinh.CurrentRow.Cells["MaLop"].Value.ToString();
+                txtStudentName.Text = dgrvDSHocSinh.CurrentRow.Cells["TenHocSinh"].Value.ToString();
+                dateTimePicker1.Text = dgrvDSHocSinh.CurrentRow.Cells["NgaySinh"].Value.ToString();
+                txtAddress.Text = dgrvDSHocSinh.CurrentRow.Cells["DiaChi"].Value.ToString();
+                txtTelephoneNumber.Text = dgrvDSHocSinh.CurrentRow.Cells["SDT"].Value.ToString();
+                if (dgrvDSHocSinh.CurrentRow.Cells["GioiTinh"].Value.ToString() == "Nam")
+                {
+                    rbMale.Checked = true;
+                }
+                else
+                {
+                    rbFemale.Checked = true;
+                }
+            }         
         }
 
         private void DgrvDSHocSinh_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -223,6 +240,23 @@ namespace QuanLyMamNon
             dataView.RowFilter = "TenHocSinh LIKE '%" + txtSearch.Text.Trim() + "%' OR DiaChi LIKE '%" + txtSearch.Text.Trim() + "%' OR SDT LIKE '%" + txtSearch.Text.Trim() + "%' OR GioiTinh LIKE '%"
                 + txtSearch.Text.Trim() + "%' OR MaLop LIKE '%" + txtSearch.Text.Trim() + "%'";
             dgrvDSHocSinh.DataSource = dataView;
+
+            if(dataView.Count > 0)
+            {
+                txtClassCode.Text = dgrvDSHocSinh.CurrentRow.Cells["MaLop"].Value.ToString();
+                txtStudentName.Text = dgrvDSHocSinh.CurrentRow.Cells["TenHocSinh"].Value.ToString();
+                dateTimePicker1.Text = dgrvDSHocSinh.CurrentRow.Cells["NgaySinh"].Value.ToString();
+                txtAddress.Text = dgrvDSHocSinh.CurrentRow.Cells["DiaChi"].Value.ToString();
+                txtTelephoneNumber.Text = dgrvDSHocSinh.CurrentRow.Cells["SDT"].Value.ToString();
+                if (dgrvDSHocSinh.CurrentRow.Cells["GioiTinh"].Value.ToString() == "Nam")
+                {
+                    rbMale.Checked = true;
+                }
+                else
+                {
+                    rbFemale.Checked = true;
+                }
+            }
         }
 
         private void TxtSearch_Leave(object sender, EventArgs e)
