@@ -152,7 +152,24 @@ namespace QuanLyMamNon
                     dataView.RowFilter = "TenHocSinh LIKE '%" + txtSearch.Text.Trim() + "%' OR DiaChi LIKE '%" + txtSearch.Text.Trim() + "%' OR SDT LIKE '%" + txtSearch.Text.Trim() + "%' OR GioiTinh LIKE '%"
                         + txtSearch.Text.Trim() + "%' OR MaLop LIKE '%" + txtSearch.Text.Trim() + "%'";
                     dgrvDSHocSinh.DataSource = dataView;
-                    MessageBox.Show("Deleted successful !");
+
+                    if (dataView.Count >= 0)
+                    {
+                        txtClassCode.Text = dgrvDSHocSinh.CurrentRow.Cells["MaLop"].Value.ToString();
+                        txtStudentName.Text = dgrvDSHocSinh.CurrentRow.Cells["TenHocSinh"].Value.ToString();
+                        dateTimePicker1.Text = dgrvDSHocSinh.CurrentRow.Cells["NgaySinh"].Value.ToString();
+                        txtAddress.Text = dgrvDSHocSinh.CurrentRow.Cells["DiaChi"].Value.ToString();
+                        txtTelephoneNumber.Text = dgrvDSHocSinh.CurrentRow.Cells["SDT"].Value.ToString();
+                        if (dgrvDSHocSinh.CurrentRow.Cells["GioiTinh"].Value.ToString() == "Nam")
+                        {
+                            rbMale.Checked = true;
+                        }
+                        else
+                        {
+                            rbFemale.Checked = true;
+                        }
+                    }
+                    MessageBox.Show("Updated successful !");
                 }
                 catch (Exception ex)
                 {
@@ -215,6 +232,23 @@ namespace QuanLyMamNon
                         dataView.RowFilter = "TenHocSinh LIKE '%" + txtSearch.Text.Trim() + "%' OR DiaChi LIKE '%" + txtSearch.Text.Trim() + "%' OR SDT LIKE '%" + txtSearch.Text.Trim() + "%' OR GioiTinh LIKE '%"
                             + txtSearch.Text.Trim() + "%' OR MaLop LIKE '%" + txtSearch.Text.Trim() + "%'";
                         dgrvDSHocSinh.DataSource = dataView;
+                        
+                        if (dataView.Count >= 0)
+                        {
+                            txtClassCode.Text = dgrvDSHocSinh.CurrentRow.Cells["MaLop"].Value.ToString();
+                            txtStudentName.Text = dgrvDSHocSinh.CurrentRow.Cells["TenHocSinh"].Value.ToString();
+                            dateTimePicker1.Text = dgrvDSHocSinh.CurrentRow.Cells["NgaySinh"].Value.ToString();
+                            txtAddress.Text = dgrvDSHocSinh.CurrentRow.Cells["DiaChi"].Value.ToString();
+                            txtTelephoneNumber.Text = dgrvDSHocSinh.CurrentRow.Cells["SDT"].Value.ToString();
+                            if (dgrvDSHocSinh.CurrentRow.Cells["GioiTinh"].Value.ToString() == "Nam")
+                            {
+                                rbMale.Checked = true;
+                            }
+                            else
+                            {
+                                rbFemale.Checked = true;
+                            }
+                        }
                         MessageBox.Show("Updated successful !");
                     }
                     catch (Exception ex)

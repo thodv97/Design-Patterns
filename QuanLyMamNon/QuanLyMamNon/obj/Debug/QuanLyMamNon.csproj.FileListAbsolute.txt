@@ -12,4 +12,3 @@ C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\De
 C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\EntityFramework.xml
 C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.csproj.CopyComplete
-C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.csprojAssemblyReference.cache
