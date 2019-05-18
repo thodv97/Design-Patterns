@@ -1,0 +1,16 @@
+1.5 Tại sao phải dùng Design Patterns ?
+•	Design Pattern giúp bạn tái sử dụng mã lệnh và dễ dàng mở rộng.
+•	Nó là tập hơn những giải pháp đã được tối ưu hóa, đã được kiểm chứng để giải quyết các vấn đề. Vậy khi bạn gặp bất kỳ khó khăn gì, Design Patterns là kim chỉ nam giúp bạn giải quyết vấn đề thay vì tự tìm kiếm giải pháp cho một vấn đề đã được chứng minh.
+•	Design Pattern cung cấp giải pháp ở dạng tổng quát, giúp tăng tốc độ phát triển phần mềm bằng cách đưa ra các mô hình test, mô hình phát triển đã qua kiểm nghiệm. 
+•	Dùng lại các Design Pattern giúp tránh được các vấn đề tiềm ẩn có thể gây ra những lỗi lớn, dễ dàng nâng cấp, bảo trì về sau.
+•	Giúp cho các lập trình viên có thể hiểu code của người khác 1 cách nhanh chóng. Mọi thành viên trong team có thể dễ dàng trao đổi với nhau để cùng xây dựng dự án mà không mất quá nhiều thời gian.
+•	Tiềm năng ứng dụng của mẫu là rất lớn. Các thiết kế dựa trên mẫu được sử dụng khá nhiều ở các phần mềm mã nguồn mở, trong nền tảng J2EE hoặc .NET... Trong các dạng ứng dụng này, có thể dễ dàng nhận ra một số tên lớp chứa các tiền tố hoặc hậu tố như Factory, Proxy, Adapter...
+1.1.	Khi nào nên sử dụng Design Patterns ?
+•	Khi bạn muốn giữ cho chương trình của mình thực sự đơn giản. Việc sử dụng các Design Pattern sẽ giúp chúng ta giảm được thời gian và công sức suy nghĩ ra các cách giải quyết cho những vấn đề đã có lời giải.
+
+•	Chúng ta phải sử dụng các mẫu thiết kế trong giai đoạn phân tích và yêu cầu của vòng đời phát triển phần mềm - SDLC (System Development Life Cycle).
+
+•	Các mẫu thiết kế giảm bớt giai đoạn phân tích và yêu cầu của SDLC bằng cách cung cấp thông tin dựa trên kinh nghiệm thực hành trước đó.
+
+
+tinyurl.com/codedaocv
