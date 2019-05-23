@@ -17,3 +17,18 @@
 
 5) Code
 
+
+3.1 Phát biểu bài toán
+3.2 Mô tả các nghiệp vụ
+3.2.1 Bản mô tả công việc
+3.2.2 Bản mô tả chi tiết công việc
+3.3 Phân tích thiết kế hướng đối tượng
+3.3.1 Biểu đồ trường hợp sử dụng (Use case)
+3.3.2 Biểu đồ trình tự (Sequence)
+3.3.3 Biểu đồ cộng tác (Collabaration)
+3.3.4 Biểu đồ lớp (Class)
+3.3.5 Biểu đồ chuyển trạng thái (State transition)
+3.4 Áp dụng Design Patterns vào bài toán
+3.5 Chương trình thực nghiệm
+3.6 Kết luận
+
