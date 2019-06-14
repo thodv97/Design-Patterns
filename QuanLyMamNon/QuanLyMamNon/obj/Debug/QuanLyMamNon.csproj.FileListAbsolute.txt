@@ -1,4 +1,3 @@
-C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.frmHocSinh.resources
 C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.Properties.Resources.resources
 C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.csproj.GenerateResource.cache
 C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.csproj.CoreCompileInputs.cache
@@ -12,3 +11,18 @@ C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\De
 C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\EntityFramework.xml
 C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.csproj.CopyComplete
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\log4net.dll
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\log4net.xml
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.frmStudent.resources
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\FlashControlV71.dll
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\bin\Debug\stdole.dll
+C:\Users\thodv\OneDrive\Desktop\Design-Patterns\QuanLyMamNon\QuanLyMamNon\obj\Debug\QuanLyMamNon.Presentation_Layers.frmLogin.resources

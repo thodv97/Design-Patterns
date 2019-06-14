@@ -1,0 +1,42 @@
+1) Tên mẫu và phân loại
+- Tên của mẫu truyền tải bản chất của mẫu một cách cô đọng. Một cái tên hay là rất quan trọng, bởi vì nó sẽ trở thành một phần trong vốn từ vựng thiết kế của bạn. Phân loại của mẫu phản ánh sơ đồ sẽ được giới thiệu ở phần sau
+2) Mục tiêu
+- Mẫu thiết kế làm gì ?
+- Lý do và mục tiêu nó làm gì ?
+- Những vấn đề thiết kế cụ thể hoặc vấn đề cần giải quyết ?
+3) Còn được biết là
+- Tên thường được gọi đối với mẫu đó, nếu có.
+4) Trình bày
+- Minh họa được vấn thiết kế, cấu trúc lớp và đối tượng
+- Giúp bạn hiểu mô tả trừu tượng hơn về mẫu
+5) Khả năng ứng dụng
+- Các tình huống trong đó các mẫu thiết kế có thể được áp dụng là gì ?
+- Các ví dụ về thiết kế kém mà mô hình này có thể giải quyết là gì ? 
+- Làm thế nào có thể nhận ra những tình huống này?
+6) Kết cấu / Cấu trúc
+- Một biểu diễn đồ họa của các lớp trong mẫu bằng cách sử dụng ký hiệu UML
+7) Các thành phần tham gia
+Các lớp và / hoặc các đối tượng tham gia vào mẫu thiết kế và trách nhiệm của chúng.
+8) Collaborations
+Làm thế nào những người tham gia hợp tác để thực hiện trách nhiệm của họ.
+9) Consequences
+Làm thế nào để mô hình hỗ trợ các mục tiêu của nó? Sự đánh đổi và kết quả của việc sử dụng mô hình là gì? Khía cạnh nào của cấu trúc hệ thống nó cho phép bạn thay đổi độc lập?
+10) Implementation
+Những gợi ý hoặc kỹ thuật nào bạn nên chú ý khi thực hiện mô hình? 
+11) Sample Code
+Các đoạn mẫu minh họa có thể triển khai
+12. Được biết đến
+VD về mẫu đang được sd trong hệ thống thực. 
+13. Mô hình liên quan
+
+
+Những mẫu thiết kế có liên quan chặt chẽ với nhau. Sự khác biệt giữa các mẫu Với những mẫu khác nên được sử dụng ntn
+
+Cải thiện khả năng đọc mã cho các lập trình viên và kiến trúc sư quen thuộc với các mẫu
+Cho phép các nhà phát triển giao tiếp bằng cách sử dụng các tên nổi tiếng, được hiểu rõ cho các tương tác phần mềm
+
+Design Pattern: là một phương pháp nhằm khắc phục những khó khăn trong phát triển phần mềm hướng đối tượng. Phương pháp này được đánh giá là kỹ thuật có nhiều tính ưu việt như khắc phục yếu điểm của kế thừa, tính đa hình, đảm bảo tính đúng đắn của phần mềm. Trong khi đó vẫn đảm bảo được các tính chất của lập trình hướng đối tượng. 
+
+
+
+Có thể tăng tốc quá trình phát triển bằng cách cung cấp các giải pháp phát triển đã được kiểm chứng, đã được chứng minh. Phương pháp này là kim chỉ nam giúp bạn giải quyết vấn đề thay vì phải tự tìm kiếm giải pháp.

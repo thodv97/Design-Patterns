@@ -7,10 +7,12 @@
 •	Tiềm năng ứng dụng của mẫu là rất lớn. Các thiết kế dựa trên mẫu được sử dụng khá nhiều ở các phần mềm mã nguồn mở, trong nền tảng J2EE hoặc .NET... Trong các dạng ứng dụng này, có thể dễ dàng nhận ra một số tên lớp chứa các tiền tố hoặc hậu tố như Factory, Proxy, Adapter...
 1.1.	Khi nào nên sử dụng Design Patterns ?
 •	Khi bạn muốn giữ cho chương trình của mình thực sự đơn giản. Việc sử dụng các Design Pattern sẽ giúp chúng ta giảm được thời gian và công sức suy nghĩ ra các cách giải quyết cho những vấn đề đã có lời giải.
-
 •	Chúng ta phải sử dụng các mẫu thiết kế trong giai đoạn phân tích và yêu cầu của vòng đời phát triển phần mềm - SDLC (System Development Life Cycle).
-
 •	Các mẫu thiết kế giảm bớt giai đoạn phân tích và yêu cầu của SDLC bằng cách cung cấp thông tin dựa trên kinh nghiệm thực hành trước đó.
 
-
 tinyurl.com/codedaocv
+
+Là một phương pháp để phát triển phần mềm đã được kiểm chứng. Phương pháp này là kim chỉ nam giúp bạn giải quyết vấn đề thay vì phải tự tìm kiếm giải pháp
+Nhìn chung, một mẫu có bốn yếu tố cần thiết sau:
++ Tên mẫu(pattern name): là một đoãn xử lý giúp chúng ta mô tả vấn đề bài toán, nó cũng là giải pháp và kết quả. Mẫu ở mức cao hơn trừu tượng. Nó dễ dàng thiết kế và 
+Chúng cung cấp các mẫu thiết kế có thể áp dụng vào thiết kế của bạn và giải quyết các vấn đề chung. Chúng không phải thư viện hay module. Chúng là những guidelines để bạn tích hợp vào core của thiết kế để tạo nên các hệ thống hướng đối tượng linh hoạt và dễ bảo trì.

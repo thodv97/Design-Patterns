@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using QuanLyMamNon.Presentation_Layers;
+using System;
 using System.Windows.Forms;
 
 namespace QuanLyMamNon
@@ -16,7 +14,7 @@ namespace QuanLyMamNon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHocSinh());
+            Application.Run(new frmLogin());
         }
     }
 }
